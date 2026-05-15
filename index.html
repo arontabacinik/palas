@@ -517,7 +517,7 @@ body{padding-top:0}
       <div class="hstat"><div class="hstat-n">+10</div><div class="hstat-l">Peças Entregues</div></div>
       <div class="hstat"><div class="hstat-n">0.15<span style="font-size:.9rem">mm</span></div><div class="hstat-l">Resolução</div></div>
       <div class="hstat"><div class="hstat-n">72h</div><div class="hstat-l">Entrega em SP</div></div>
-      <div class="hstat"><div class="hstat-n">7</div><div class="hstat-l">Modelos</div></div>
+      <div class="hstat"><div class="hstat-n">8</div><div class="hstat-l">Modelos</div></div>
     </div>
   </div>
   <div class="hscroll">Scroll</div>
@@ -533,7 +533,7 @@ body{padding-top:0}
       <span class="snum">01</span>
       <h2 class="stitle">Escolha sua Peça</h2>
     </div>
-    <span class="smeta" id="pmeta">7 modelos disponíveis</span>
+    <span class="smeta" id="pmeta">8 modelos disponíveis</span>
   </div>
   <div class="frow">
     <div class="fbar" id="fbar">
@@ -820,7 +820,7 @@ function crc16(payload){
 }
 
 /* ═══ TICKER ═══ */
-const TICKS=['⚡ Bambu Lab X1C','💎 PLA Silk + PETG','📍 Entrega em SP','🎨 Cores Customizadas','✦ Edição Limitada','⟳ Print on Demand','🔥 +100 Entregues','⚙ Resolução 0.15mm','🌿 PLA Eco Disponível','🛠 Produção Local'];
+const TICKS=['⚡ Bambu Lab X1C','💎 PLA Silk + PETG','📍 Entrega em SP','🎨 Cores Customizadas','✦ Edição Limitada','⟳ Print on Demand','🔥 +100 Entregues','⚙ Resolução 0.15mm','🌿 PLA Eco Disponível','🛠 Produção Local', '🪶 Piteira Hexagonal'];
 const ttk=document.getElementById('ttk');
 ttk.innerHTML=[...TICKS,...TICKS].map(t=>`<span class="titem"><span class="tdot"></span>${t}</span>`).join('');
 
@@ -901,7 +901,28 @@ const P=[
     <rect x="46" y="84" width="54" height="14" rx="3" stroke="#4f7fff" stroke-width="1" fill="rgba(79,127,255,0.07)"/>
     <rect x="112" y="52" width="82" height="10" rx="3" fill="rgba(79,127,255,0.1)" stroke="#4f7fff" stroke-width=".8"/>
     <rect x="112" y="70" width="62" height="8" rx="3" fill="rgba(79,127,255,0.07)"/>
-    <rect x="112" y="86" width="48" height="8" rx="3" fill="rgba(79,127,255,0.05)"/></svg>`}
+    <rect x="112" y="86" width="48" height="8" rx="3" fill="rgba(79,127,255,0.05)"/></svg>`},
+  {id:7,name:'Piteira Hex',cat:'acc',price:7,mat:'PLA Matte',print:'~1.5h',badge:'new',bLabel:'Novo',cls:'co',accent:'#ff7c35',colors:['#ff7c35','#c8ff00','#ffffff','#4f7fff'],
+    desc:'Piteira ergonômica hexagonal com canais internos para fluxo otimizado. Acabamento matte, resistente à temperatura. Reutilizável e lavável.',
+    longDesc:'Design exclusivo com 6 canais de ventilação. Compatível com sedas padrão (até 76mm). PLA matte food-safe. 100% reutilizável — higienize com água morna e sabão. Impressão em Bambu Lab X1C com resolução 0.15mm.',
+    svg:`<svg viewBox="0 0 240 160">
+    <defs><linearGradient id="hexGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#ff7c35" stop-opacity="0.6"/><stop offset="100%" stop-color="#ff7c35" stop-opacity="0.1"/></linearGradient></defs>
+    <!-- corpo hexagonal da piteira -->
+    <polygon points="120,32 148,50 148,86 120,104 92,86 92,50" stroke="#ff7c35" stroke-width="1.8" fill="url(#hexGrad)"/>
+    <!-- canal central (furo) -->
+    <polygon points="120,48 136,56 136,72 120,80 104,72 104,56" stroke="#ff7c35" stroke-width="1" fill="rgba(200,255,0,0.08)"/>
+    <!-- canais laterais decorativos -->
+    <line x1="120" y1="104" x2="120" y2="124" stroke="#ff7c35" stroke-width="1.2" opacity="0.6"/>
+    <line x1="148" y1="86" x2="162" y2="96" stroke="#ff7c35" stroke-width="1" opacity="0.5"/>
+    <line x1="92" y1="86" x2="78" y2="96" stroke="#ff7c35" stroke-width="1" opacity="0.5"/>
+    <!-- detalhes de textura -->
+    <circle cx="120" cy="68" r="2" fill="#ff7c35" opacity="0.4"/>
+    <circle cx="134" cy="58" r="1.5" fill="#ff7c35" opacity="0.3"/>
+    <circle cx="106" cy="58" r="1.5" fill="#ff7c35" opacity="0.3"/>
+    <!-- sombra suave -->
+    <ellipse cx="120" cy="130" rx="20" ry="6" fill="rgba(0,0,0,0.2)"/>
+    <text x="120" y="150" text-anchor="middle" fill="#ff7c35" opacity="0.5" font-size="7" font-family="monospace">AIRFLOW</text>
+    </svg>`}
 ];
 
 /* ═══ STATE ═══ */
