@@ -2560,7 +2560,7 @@
         /* ═══ TICKER ═══ */
         const TICKS = ['⚡ Bambu Lab X1C', '💎 PLA Silk + PETG', '📍 Entrega em SP', '🎨 Cores Customizadas', '✦ Edição Limitada',
             '⟳ Print on Demand', '🔥 +100 Entregues', '⚙ Resolução 0.15mm', '🌿 PLA Eco Disponível', '🛠 Produção Local',
-            '🪶 Piteira Hexagonal'
+            '🪶 agonal'
         ];
         const ttk = document.getElementById('ttk');
         ttk.innerHTML = [...TICKS, ...TICKS].map(t => `<span class="titem"><span class="tdot"></span>${t}</span>`).join('');
@@ -2727,34 +2727,58 @@
     <rect x="112" y="70" width="62" height="8" rx="3" fill="rgba(79,127,255,0.07)"/>
     <rect x="112" y="86" width="48" height="8" rx="3" fill="rgba(79,127,255,0.05)"/></svg>`
         }, {
-            id: 7,
-            name: 'Piteira Hex',
-            cat: 'acc',
-            price: 7,
-            mat: 'PLA Matte',
-            print: '~1.5h',
-            badge: 'new',
-            bLabel: 'Novo',
-            cls: 'co',
-            accent: '#ff7c35',
-            colors: ['#ff7c35', '#c8ff00', '#ffffff', '#4f7fff'],
-            desc: 'Piteira ergonômica hexagonal com canais internos para fluxo otimizado. Acabamento matte, resistente à temperatura. Reutilizável e lavável.',
-            longDesc: 'Design exclusivo com 6 canais de ventilação. Compatível com sedas padrão (até 76mm). PLA matte food-safe. 100% reutilizável.',
-            img: 'https://picsum.photos/seed/piteirahex/600/400',
-            svg: `<svg viewBox="0 0 240 160">
-    <defs><linearGradient id="hexGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#ff7c35" stop-opacity="0.6"/><stop offset="100%" stop-color="#ff7c35" stop-opacity="0.1"/></linearGradient></defs>
-    <polygon points="120,32 148,50 148,86 120,104 92,86 92,50" stroke="#ff7c35" stroke-width="1.8" fill="url(#hexGrad)"/>
-    <polygon points="120,48 136,56 136,72 120,80 104,72 104,56" stroke="#ff7c35" stroke-width="1" fill="rgba(200,255,0,0.08)"/>
-    <line x1="120" y1="104" x2="120" y2="124" stroke="#ff7c35" stroke-width="1.2" opacity="0.6"/>
-    <line x1="148" y1="86" x2="162" y2="96" stroke="#ff7c35" stroke-width="1" opacity="0.5"/>
-    <line x1="92" y1="86" x2="78" y2="96" stroke="#ff7c35" stroke-width="1" opacity="0.5"/>
-    <circle cx="120" cy="68" r="2" fill="#ff7c35" opacity="0.4"/>
-    <circle cx="134" cy="58" r="1.5" fill="#ff7c35" opacity="0.3"/>
-    <circle cx="106" cy="58" r="1.5" fill="#ff7c35" opacity="0.3"/>
-    <ellipse cx="120" cy="130" rx="20" ry="6" fill="rgba(0,0,0,0.2)"/>
-    <text x="120" y="150" text-anchor="middle" fill="#ff7c35" opacity="0.5" font-size="7" font-family="monospace">AIRFLOW</text>
-    </svg>`
-        }];
+        id: 7,
+        name: 'Porta Baseado',
+        cat: 'acc',
+        price: 7,
+        mat: 'PLA Matte',
+        print: '~1.5h',
+        badge: 'new',
+        bLabel: 'Novo',
+        cls: 'co',
+        accent: '#ff7c35',
+        colors: ['#ff7c35', '#c8ff00', '#ffffff', '#4f7fff'],
+        desc: 'Suporte prático para baseados com 3 furos de diferentes bitolas. Acabamento matte, base antiderrapante. Organize seus baseados com estilo.',
+        longDesc: 'Design exclusivo com 3 furos (8mm, 10mm e 12mm) para diferentes bitolas. Base com 3mm de espessura e anéis de silicone para estabilidade. PLA matte food-safe. 100% reutilizável e fácil de limpar.',
+        img: './PortaBeck.png',
+        svg: `<svg viewBox="0 0 240 160">
+            <defs>
+                <linearGradient id="portaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#ff7c35" stop-opacity="0.6"/>
+                    <stop offset="100%" stop-color="#ff7c35" stop-opacity="0.1"/>
+                </linearGradient>
+            </defs>
+            <!-- Base oval -->
+            <ellipse cx="120" cy="130" rx="65" ry="20" stroke="#ff7c35" stroke-width="2" fill="url(#portaGrad)"/>
+            <ellipse cx="120" cy="128" rx="60" ry="17" stroke="#ff7c35" stroke-width="0.8" fill="none" opacity="0.3"/>
+            
+            <!-- Furo 1 (8mm) -->
+            <circle cx="80" cy="60" r="16" stroke="#ff7c35" stroke-width="2.5" fill="rgba(200,255,0,0.05)"/>
+            <circle cx="80" cy="60" r="10" stroke="#ff7c35" stroke-width="1.2" fill="none" opacity="0.4"/>
+            <circle cx="80" cy="60" r="5" fill="#ff7c35" opacity="0.2"/>
+            <text x="80" y="88" text-anchor="middle" fill="#ff7c35" opacity="0.6" font-size="8" font-family="monospace">8mm</text>
+            
+            <!-- Furo 2 (10mm) - central -->
+            <circle cx="120" cy="52" r="20" stroke="#ff7c35" stroke-width="2.5" fill="rgba(200,255,0,0.05)"/>
+            <circle cx="120" cy="52" r="12" stroke="#ff7c35" stroke-width="1.2" fill="none" opacity="0.4"/>
+            <circle cx="120" cy="52" r="6" fill="#ff7c35" opacity="0.2"/>
+            <text x="120" y="80" text-anchor="middle" fill="#ff7c35" opacity="0.6" font-size="8" font-family="monospace">10mm</text>
+            
+            <!-- Furo 3 (12mm) -->
+            <circle cx="160" cy="60" r="18" stroke="#ff7c35" stroke-width="2.5" fill="rgba(200,255,0,0.05)"/>
+            <circle cx="160" cy="60" r="11" stroke="#ff7c35" stroke-width="1.2" fill="none" opacity="0.4"/>
+            <circle cx="160" cy="60" r="5.5" fill="#ff7c35" opacity="0.2"/>
+            <text x="160" y="88" text-anchor="middle" fill="#ff7c35" opacity="0.6" font-size="8" font-family="monospace">12mm</text>
+            
+            <!-- Anéis de silicone decorativos -->
+            <circle cx="80" cy="60" r="22" stroke="#ff7c35" stroke-width="0.5" stroke-dasharray="3,3" fill="none" opacity="0.2"/>
+            <circle cx="120" cy="52" r="26" stroke="#ff7c35" stroke-width="0.5" stroke-dasharray="3,3" fill="none" opacity="0.2"/>
+            <circle cx="160" cy="60" r="24" stroke="#ff7c35" stroke-width="0.5" stroke-dasharray="3,3" fill="none" opacity="0.2"/>
+            
+            <!-- Texto inferior -->
+            <text x="120" y="150" text-anchor="middle" fill="#ff7c35" opacity="0.4" font-size="6" font-family="monospace">PORTA BASEADO</text>
+        </svg>`}
+    ];
 
         /* ═══ STATE ═══ */
         let cart = {};
