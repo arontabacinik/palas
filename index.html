@@ -2262,9 +2262,9 @@
                 </div>
             </div>
             <div class="hstats">
-                <div class="hstat"><div class="hstat-n">+60</div><div class="hstat-l">Peças Entregues</div></div>
+                <div class="hstat"><div class="hstat-n">+10</div><div class="hstat-l">Peças Entregues</div></div>
                 <div class="hstat"><div class="hstat-n">0.15<span style="font-size:.9rem">mm</span></div><div class="hstat-l">Resolução</div></div>
-                <div class="hstat"><div class="hstat-n">2 semanas</div><div class="hstat-l">Entrega em SP</div></div>
+                <div class="hstat"><div class="hstat-n">72h</div><div class="hstat-l">Entrega em SP</div></div>
                 <div class="hstat"><div class="hstat-n">8</div><div class="hstat-l">Modelos</div></div>
             </div>
         </div>
@@ -2560,7 +2560,7 @@
         /* ═══ TICKER ═══ */
         const TICKS = ['⚡ Bambu Lab X1C', '💎 PLA Silk + PETG', '📍 Entrega em SP', '🎨 Cores Customizadas', '✦ Edição Limitada',
             '⟳ Print on Demand', '🔥 +100 Entregues', '⚙ Resolução 0.15mm', '🌿 PLA Eco Disponível', '🛠 Produção Local',
-            '🪶 agonal'
+            '🪶 Piteira Hexagonal'
         ];
         const ttk = document.getElementById('ttk');
         ttk.innerHTML = [...TICKS, ...TICKS].map(t => `<span class="titem"><span class="tdot"></span>${t}</span>`).join('');
@@ -2571,7 +2571,7 @@
             name: 'Bong Reto',
             cat: 'bong',
             price: 89,
-            mat: 'PLA Translúcido',
+            mat: 'PLA',
             print: '~6h',
             badge: 'new',
             bLabel: 'Novo',
@@ -2580,7 +2580,7 @@
             colors: ['#c8ff00', '#ffffff', '#88aaff', '#ff88aa'],
             desc: 'O silhouette reto clássico reimaginado com impressão 3D de precisão. PLA translúcido deixa você ver cada bolha.',
             longDesc: 'Construído com Bambu Lab X1C, 0.15mm layer height, 40% infill. Pós-processo food-safe. Inclui bowl piece removível.',
-            img: 'https://picsum.photos/seed/bongreto/600/400',
+            img: './BongRemoved.png',
             svg: `<svg viewBox="0 0 240 160"><defs><filter id="g0"><feGaussianBlur stdDeviation="3.5"/></filter></defs>
     <rect x="108" y="12" width="18" height="92" rx="4" stroke="#c8ff00" stroke-width="1.5" fill="rgba(200,255,0,0.05)"/>
     <rect x="108" y="12" width="18" height="92" rx="4" stroke="#c8ff00" stroke-width="2" fill="none" filter="url(#g0)" opacity="0.35"/>
@@ -2618,7 +2618,7 @@
             name: 'Bubblers',
             cat: 'bong',
             price: 74,
-            mat: 'PETG + PLA Silk',
+            mat: 'PLA',
             print: '~7h',
             badge: '',
             bLabel: '',
@@ -2641,7 +2641,7 @@
             name: 'Porta-Isqueiro',
             cat: 'acc',
             price: 19,
-            mat: 'PLA Rígido',
+            mat: 'PLA',
             print: '~2h',
             badge: '',
             bLabel: '',
@@ -2663,7 +2663,7 @@
             name: 'Slick Puck',
             cat: 'acc',
             price: 34,
-            mat: 'PETG Food-Safe',
+            mat: 'PLA',
             print: '~3h',
             badge: 'new',
             bLabel: 'Novo',
@@ -2684,7 +2684,7 @@
             name: 'Cinzeiro Orbital',
             cat: 'acc',
             price: 29,
-            mat: 'PLA Matte',
+            mat: 'PLA',
             print: '~4h',
             badge: '',
             bLabel: '',
@@ -2708,7 +2708,7 @@
             name: 'Rolling Tray',
             cat: 'acc',
             price: 44,
-            mat: 'PLA + ABS Mix',
+            mat: 'PLA',
             print: '~5h',
             badge: 'hot',
             bLabel: 'Popular',
@@ -2731,7 +2731,7 @@
         name: 'Porta Baseado',
         cat: 'acc',
         price: 7,
-        mat: 'PLA Matte',
+        mat: 'PLA',
         print: '~1.5h',
         badge: 'new',
         bLabel: 'Novo',
@@ -2777,8 +2777,7 @@
             
             <!-- Texto inferior -->
             <text x="120" y="150" text-anchor="middle" fill="#ff7c35" opacity="0.4" font-size="6" font-family="monospace">PORTA BASEADO</text>
-        </svg>`}
-    ];
+        </svg>`}];
 
         /* ═══ STATE ═══ */
         let cart = {};
